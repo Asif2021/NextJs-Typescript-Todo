@@ -13,9 +13,9 @@ setTodo("");
 }
 
   return (
-    <form onSubmit={handleFormSubmit}>
-<input type='text' placeholder='write your todo' name='' value={todo} onChange={(event)=>{setTodo(event.target.value)}}/>
-<button type='submit' className='text-black border border-solid ml-2 px-4'>Add</button>
+    <form onSubmit={handleFormSubmit} className='flex justify-between'>
+<input type='text' placeholder='Write Your Todo' name='' className='border border-black px-2 py-1 rounded-md w-4/5' value={todo} onChange={(event)=>{setTodo(event.target.value)}}/>
+<button type='submit' className='text-black border border-solid border-black rounded-md px-4 py-1 hover:bg-black hover:text-white'>Add</button>
     </form>
   )
 }

@@ -17,16 +17,16 @@ const Todos = () => {
     }
 
   return (
-   <ul>
+   <ul className="flex flex-col w-full mt-2">
   {
     filterTodos.map((todo) => {
-return <li key={todo.id}>
+return <li key={todo.id} className="flex items-center mt-1">
 
-    <input type="checkbox" id={`todo - ${todo.id}`} checked={todo.completed} onChange={()=>toggleTodoAsCompleted(todo.id)}/>
+    <input type="checkbox" className="mr-1" id={`todo - ${todo.id}`} checked={todo.completed} onChange={()=>toggleTodoAsCompleted(todo.id)}/>
 
     <label htmlFor={`todo - ${todo.id}`}>{todo.task}</label>
     {
-        todo.completed && (<button type="button" onClick={()=>{handleTodoDelete(todo.id)}}> Delete</button>)
+        todo.completed && (<button type="button" className="border border-black rounded-md ml-auto px-2 hover:bg-black hover:text-white" onClick={()=>{handleTodoDelete(todo.id)}}> Delete</button>)
     }
 
 </li>
